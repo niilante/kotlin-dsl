@@ -62,6 +62,7 @@ class KotlinInitScriptIntegrationTest : AbstractIntegrationTest() {
     }
 
     @Test
+    @LeaksFileHandles
     fun `Kotlin init scripts from init dir can add buildscript repositories to projects`() {
 
         val testRepositoryDir = temporaryFolder.newFolder("test-repository")
