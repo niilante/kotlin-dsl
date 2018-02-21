@@ -16,10 +16,10 @@ open class ThePluginTask : DefaultTask() {
 
     var from: String = "default from value"
 
-    open fun configure(setup: (String) -> String) = setup(from)
+    open fun doConfigure(setup: (String) -> String) = setup(from)
 
     @TaskAction
     fun run() {
-        println(configure { "it = $it" })
+        println(doConfigure { "it = $it" })
     }
 }
